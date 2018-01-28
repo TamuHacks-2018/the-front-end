@@ -15,7 +15,9 @@ login = function(){
           "crossDomain": true,
           "url": "https://travel-guide-finder.appspot.com/api/login",
           "method": "POST",
-
+          "xhrFields" : {
+            "withCredentials" : true
+          },
           "processData": false,
           "contentType": false,
           "mimeType": "multipart/form-data",
