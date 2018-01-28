@@ -23,7 +23,7 @@
             $message_input = $('.message_input');
             return $message_input.val();
         };
-        sendMessage = function (text, message_side, time) {
+        sendMessage = function (text, side, time) {
             var $messages, message;
             if (text.trim() === '') {
                 return;
@@ -31,6 +31,7 @@
             $('.message_input').val('');
             $messages = $('.messages');
             // message_side = message_side === 'left' ? 'right' : 'left';
+            message_side =side
             message = new Message({
                 text: text,
                 message_side: message_side
@@ -38,20 +39,20 @@
             message.draw();
             return $messages.animate({ scrollTop: $messages.prop('scrollHeight') }, time);
         };
-        $('.send_message').click(function (e) {
-            return sendMessage(getMessageText());
-        });
-        $('.message_input').keyup(function (e) {
-            if (e.which === 13) {
-                return sendMessage(getMessageText());
-            }
-        });
-        // sendMessage('Hello Philip! :)');
+        // $('.send_message').click(function (e) {
+        //     return sendMessage(getMessageText(), "right", 300);
+        // });
+        // $('.message_input').keyup(function (e) {
+        //     if (e.which === 13) {
+        //         return sendMessage(getMessageText(), "right", 300);
+        //     }
+        // });
+        // sendMessage('Hello Philip! :)', "left", 300);
         // setTimeout(function () {
-        //     return sendMessage('Hi Sandy! I have great sights for you to see in San Diego!');
+        //     return sendMessage('Hi Sandy! I have great sights for you to see in San Diego!', "right", 300);
         // }, 1000);
         // return setTimeout(function () {
-        //     return sendMessage('Thank you! I am so excited.');
+        //     return sendMessage('Thank you! I am so excited.', "left", 300);
         // }, 2000);
 
         current = []
