@@ -1,0 +1,263 @@
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color: #f9f9f9;
+}
+
+.pin{
+  color: grey;
+}
+
+.pin:hover{
+  color: blue;
+}
+
+.navbar-brand{
+  color: #42A5F5 !important;
+}
+
+.navbar{
+  background-color: white !important;
+  border-bottom: lightgrey 1px solid;
+}
+
+.nav-item:hover{
+  /* background-color: #42A5F5; */
+  /* color: white !important; */
+  animation-name: hover-main;
+  animation-duration: .4s;
+}
+
+.nav-item:hover:after{
+  /* background-color: white; */
+  animation-name: hover-main;
+  animation-direction: reverse;
+  animation-duration: .4s;
+}
+
+@keyframes hover-main {
+    from {background-color: white; color: black;}
+    to {text-decoration: underline;}
+}
+
+li .right{
+  float:right !important;
+}
+
+.card{
+  margin-top: 20px;
+}
+
+.main-square{
+  width: 50vh;
+  height: 50vh;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  background-color: white;
+  border: 1px grey solid;
+  border-radius: 8px;
+}
+.fill{
+  height: 100%;
+  width: 100%;
+}
+
+.flex{
+  z-index: 100 !important;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.plane {
+  right: 90%;
+  -webkit-animation: paper-plane-soaring 4s alternate infinite linear;
+  -moz-animation: paper-plane-soaring 4s alternate infinite linear;
+  animation: paper-plane-soaring 4s alternate infinite linear;
+}
+
+@-webkit-keyframes paper-plane-soaring {
+  0% {
+    /* left:30%; */
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    transform: rotate(25deg);
+  }
+  10% {
+    -webkit-transform: rotate(24deg);
+    -moz-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+  20% {
+    -webkit-transform: rotate(21deg);
+    -moz-transform: rotate(21deg);
+    transform: rotate(21deg);
+  }
+  30% {
+    -webkit-transform: rotate(16deg);
+    -moz-transform: rotate(16deg);
+    transform: rotate(16deg);
+  }
+  40% {
+    -webkit-transform: rotate(9deg);
+    -moz-transform: rotate(9deg);
+    transform: rotate(9deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  60% {
+    -webkit-transform: rotate(-9deg);
+    -moz-transform: rotate(-9deg);
+    transform: rotate(-9deg);
+  }
+  70% {
+    -webkit-transform: rotate(-16deg);
+    -moz-transform: rotate(-16deg);
+    transform: rotate(-16deg);
+  }
+  80% {
+    -webkit-transform: rotate(deg);
+    -moz-transform: rotate(-21deg);
+    transform: rotate(-21deg);
+  }
+  90% {
+    -webkit-transform: rotate(-24deg);
+    -moz-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+  100% {
+    /* left:20%; */
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+  }
+}
+
+.cloud{
+  position:absolute;
+  z-index: 1;
+}
+
+.cloud1{
+  right: 0%;
+  top: 1%;
+  -webkit-animation: cloud-movement 7.257s forwards infinite linear;
+  -moz-animation: cloud-movement 7.257s forwards infinite linear;
+  animation: cloud-movement 7.257s forwards infinite linear;
+}
+
+.cloud2{
+  right: 0%;
+  top:90%;
+  -webkit-animation: cloud-movement 8.745s forwards infinite linear;
+  -moz-animation: cloud-movement 8.745s forwards infinite linear;
+  animation: cloud-movement 8.745s forwards infinite linear;
+}
+
+.cloud3{
+  right: 0%;
+  top: 60%;
+  -webkit-animation: cloud-movement 10.1212s forwards infinite linear;
+  -moz-animation: cloud-movement 10.1212s forwards infinite linear;
+  animation: cloud-movement 10.1212s forwards infinite linear;
+}
+
+.cloud4{
+  right: 0%;
+  top: 30%;
+  animation-delay: 2s;
+  -webkit-animation: cloud-movement 12.97787s forwards infinite linear;
+  -moz-animation: cloud-movement 12.97787s forwards infinite linear;
+  animation: cloud-movement 12.97787s forwards infinite linear;
+}
+
+@-webkit-keyframes cloud-movement {
+  0% {
+    opacity: 0.1;
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    transform: translateX(300px);
+  }
+  10% {
+
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -moz-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+
+.outer{
+    height: 100%;
+    width: 200%;
+    position: fixed;
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+.filter{
+  position: fixed;
+
+}
+
+
+input[type=checkbox] {
+   display: none;
+}
+
+.coolbox label:before {
+  border: black solid 2px;
+	border-radius: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
+  /* background-color: red; */
+  content: "\25A0";
+  color: #ffffff00;
+  margin-right: 6px;
+}
+
+input[type=checkbox]:checked + label:before {
+	content: "\25A0";
+	/* text-shadow: 1px 1px 1px rgba(0, 0, 0, .2); */
+	/* font-size: 15px; */
+	color: black;
+	text-align: center;
+  line-height: 15px;
+  background-color: black;
+}
+
+.card_template{
+  display: none;
+}
+
+.carousel_template{
+  display: none;
+}
+
+.modal_template{
+  display: none;
+}
+
+.fixed-img{
+  background-size: cover !important;
+  height: 500px !important;
+  width: auto !important;
+}
