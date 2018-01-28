@@ -5,7 +5,11 @@ login = function(){
       console.log($('#username').val());
       console.log($('#password').val());
       console.log(form);
-      // return;
+      if($('#username').val() != "ritz3")
+        return;
+      else if($('#password').val() != "12345")
+        return;
+
       var settings = {
           "async": true,
           "crossDomain": true,
@@ -19,9 +23,9 @@ login = function(){
         }
 
       $.ajax(settings).done(function (response) {
-        console.log(response);
+        // console.log(response);
         window.location.replace("post.html");
       });
 
-
+      window.location.replace("post.html");
 }
