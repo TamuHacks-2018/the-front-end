@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel = "stylesheet" href = "chat-css.css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+     </head>
+    <body>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom:10px;">
+    <div class="container">
+      <div class="row offset-sm-2">
+        <a class="navbar-brand" href="#">voyage</a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+        <div class="navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Trips<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Plans<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">History</a>
+            </li>
+          </ul>
+
+          <!-- TODO: RIGHT ACCOUNT BUTTON -->
+
+          <!-- <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link">Right Link 1</a>
+            </li>
+            <li class="navbar-item">
+              <a class="nav-link">Right Link 2</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+    <div class = "container">
+
+            <div class="page-header">
+                    <h1 style = "font-size: 45px; font-family: 'Pacifico', cursive;"> Make a Guide </h1>
+            </div>
+
+
+            <div class="form-group">
+                <label for="name" style = "font-size: 20px; font-family: 'Josefin Sans', sans-serif;">Name of Guide:</label>
+                    <input type="name" class="form-control" id="name">
+                      <label class="error" for="name" id="name_error">This field is required.</label>
+
+            </div>
+
+            <form>
+                    <div class="form-group">
+                        <label for="gds" style = "font-size: 25px; font-family: 'Josefin Sans', sans-serif;">Guide Description:</label>
+                        <textarea class="form-control" rows="5" id="gds"></textarea>
+                          <label class="error" for="gds" id="gds_error">This field is required.</label>
+
+                    </div>
+            </form>
+
+            <div class="form-group">
+                <label for="gds" style = "font-size: 25px; font-family: 'Josefin Sans', sans-serif;">City</label>
+                <input class="form-control" type="text" rows="5" id="gds"></input>
+                  <label class="error" for="gds" id="gds_error">This field is required.</label>
+
+            </div>
+
+            <h2 style = "font-size: 30px; font-family: 'Josefin Sans', sans-serif;"> Visuals Make a Vacation </h2>
+                <p style = "font-size: 20px; font-family: 'Josefin Sans', sans-serif;">Upload your images online, and attach them as links to jpegs's, separated by commas:</p>
+
+                    <div class="form-group">
+                        <label for="comment" style = "font-size: 25px; font-family: 'Josefin Sans', sans-serif;">Comment:</label>
+                        <textarea class="form-control" rows="5" id="pictures"></textarea>
+                        <label class="error" for="comment" id="comment_error">This field is required.</label>
+
+                    </div>
+
+                <button name="submit" class="btn btn-primary button" id="submit_btn" onclick="login()">SUBMIT </button>
+
+
+
+    </div>
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="guide-making.js"></script>
+    </body>
+</html>
