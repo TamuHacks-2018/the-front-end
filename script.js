@@ -79,7 +79,9 @@
           }});
         }
 
-        $.ajax({url: "https://travel-guide-finder.appspot.com/api/current_user_data", success:function(result){
+        $.ajax({url: "https://travel-guide-finder.appspot.com/api/current_user_data", xhrFields : {
+          withCredentials : true
+        }, success:function(result){
           current_user_name = result.curr_user_name;
           current_user_id = result.curr_user_id;
           guide_id = result.other_user_id;

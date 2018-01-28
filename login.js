@@ -11,10 +11,7 @@ login = function(){
           "crossDomain": true,
           "url": "https://travel-guide-finder.appspot.com/api/login",
           "method": "POST",
-          "headers": {
-          "cache-control": "no-cache",
-          "postman-token": "1ccaec0b-e5b6-47f0-282b-863fb5cdc27a"
-        },
+
           "processData": false,
           "contentType": false,
           "mimeType": "multipart/form-data",
@@ -22,10 +19,9 @@ login = function(){
         }
 
       $.ajax(settings).done(function (response) {
-
         console.log(response);
-
+        // window.location.replace("post.html");
       });
 
-      window.location.replace("post.html");
+
 }
