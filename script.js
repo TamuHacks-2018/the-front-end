@@ -47,47 +47,47 @@
                 return sendMessage(getMessageText(), "right", 300);
             }
         });
-        // sendMessage('Hello Philip! :)', "left", 300);
-        // setTimeout(function () {
-        //     return sendMessage('Hi Sandy! I have great sights for you to see in San Diego!', "right", 300);
-        // }, 1000);
-        // return setTimeout(function () {
-        //     return sendMessage('Thank you! I am so excited.', "left", 300);
-        // }, 2000);
+        sendMessage('Hello Philip! :)', "left", 300);
+        setTimeout(function () {
+            return sendMessage('Hi Sandy! I have great sights for you to see in San Diego!', "right", 300);
+        }, 1000);
+        return setTimeout(function () {
+            return sendMessage('Thank you! I am so excited.', "left", 300);
+        }, 2000);
 
-        current = []
-        check_for_messages = function(){
-          $.ajax({url:"https://travel-guide-finder.appspot.com/api/chat/" + current_user_id + "/" + guide_id, function(result){
-            var newk = result.chat;
-            for(var i = current.length; i < newk.length; i++){
-                sendMessage(current[i].text, current_user_name == current[i].text_owner ? "right" : "left", 200);
-            }
-            setTimeout(check_for_messages, 500);
-          }});
-
-        }
-        current_user_name = "";
-        current_user_id = 0;
-        guide_id = 1
-        load_initial_messages = function(){
-
-          $.ajax({url: "https://travel-guide-finder.appspot.com/api/chat/" + current_user_id + "/" + guide_id, success: function(result){
-            current = result.chat;
-            for(var i = 0; i < current.length; i++){
-              sendMessage(current[i].text, current_user_name == current[i].text_owner ? "right" : "left", 0);
-            }
-            setTimeout(check_for_messages, 500);
-          }});
-        }
-
-        $.ajax({url: "https://travel-guide-finder.appspot.com/api/current_user_data", xhrFields : {
-          withCredentials : true
-        }, success:function(result){
-          current_user_name = result.curr_user_name;
-          current_user_id = result.curr_user_id;
-          guide_id = result.other_user_id;
-          console.log(result);
-          load_initial_messages();
-        }});
+        // current = []
+        // check_for_messages = function(){
+        //   $.ajax({url:"https://travel-guide-finder.appspot.com/api/chat/" + current_user_id + "/" + guide_id, function(result){
+        //     var newk = result.chat;
+        //     for(var i = current.length; i < newk.length; i++){
+        //         sendMessage(current[i].text, current_user_name == current[i].text_owner ? "right" : "left", 200);
+        //     }
+        //     setTimeout(check_for_messages, 500);
+        //   }});
+        //
+        // }
+        // current_user_name = "";
+        // current_user_id = 0;
+        // guide_id = 1
+        // load_initial_messages = function(){
+        //
+        //   $.ajax({url: "https://travel-guide-finder.appspot.com/api/chat/" + current_user_id + "/" + guide_id, success: function(result){
+        //     current = result.chat;
+        //     for(var i = 0; i < current.length; i++){
+        //       sendMessage(current[i].text, current_user_name == current[i].text_owner ? "right" : "left", 0);
+        //     }
+        //     setTimeout(check_for_messages, 500);
+        //   }});
+        // }
+        //
+        // $.ajax({url: "https://travel-guide-finder.appspot.com/api/current_user_data", xhrFields : {
+        //   withCredentials : true
+        // }, success:function(result){
+        //   current_user_name = result.curr_user_name;
+        //   current_user_id = result.curr_user_id;
+        //   guide_id = result.other_user_id;
+        //   console.log(result);
+        //   load_initial_messages();
+        // }});
     });
 }.call(this));
